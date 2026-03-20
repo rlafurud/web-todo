@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Web UI</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="background-decoration decoration-1"></div>
+      <div class="background-decoration decoration-2"></div>
+
+      <main class="todo-card">
+        <header class="todo-header">
+          <div>
+            <p class="eyebrow">Week3</p>
+            <h1>TODO</h1>
+          </div>
+
+          <div class="status-box">
+            <span>Done</span>
+            <strong><span id="completed-count">0</span> / <span id="total-count">0</span></strong>
+          </div>
+        </header>
+
+        <form id="todo-form" class="todo-form">
+          <input
+            id="todo-input"
+            class="todo-input"
+            type="text"
+            placeholder="What's your plan for today?"
+            autocomplete="off"
+          />
+          <button id="add-button" class="primary-button" type="submit">Add</button>
+        </form>
+
+        <p id="error-message" class="error-message hidden"></p>
+        <div id="loading-box" class="loading-box">Loading...</div>
+        <p id="empty-message" class="empty-message hidden">No todos yet.</p>
+        <ul id="todo-list" class="todo-list hidden"></ul>
+      </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
